@@ -1,0 +1,224 @@
+* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+*{
+    margin: 0;
+    padding: 0;
+    font: inherit;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html{
+    height: 100%;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+  max-width: 100%;
+}
+
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+body{
+    min-height: 100vh;
+    background: linear-gradient(to bottom right, rgb(85, 171, 205), rgb(16, 74, 161));
+    background-repeat: no-repeat;
+    background-size: contain;
+    color: rgb(98, 98, 98)
+}
+
+.form-center{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+form{
+    display: flex;
+    flex-direction: column;
+    width: min(25em, 50%);
+    justify-items: center;
+    background: white;
+    padding-inline: 2em;
+    margin-top: 10em;
+}
+form h1{
+    color:  rgb(14, 139, 188);
+    font-size: 20px;
+    font-weight: bolder;
+    margin-block: .8em;
+    text-align: center;
+}
+.input{
+    display: grid;
+    gap: 1em;
+    margin-bottom: 1.5em;
+}
+form input{
+    border: none;
+    outline: none;
+    border-bottom: gainsboro solid;
+
+}
+form input:focus{
+    border-bottom:  rgb(14, 139, 188) solid;
+}
+
+.checkbox-terms{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1.5em;
+}
+.checkbox-terms input{
+    height: 1em;
+    width:  1em;
+}
+.terms{
+    margin-left: .7em;
+    font-size: 14px;
+}
+.terms a{
+    color:  rgb(16, 151, 205);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.submit{
+    display: flex;
+    align-items: center;
+    margin-bottom: 3em;
+}
+.submit button{
+    width: 9em;
+    height: 2.5em;
+    margin-right: 1em;
+    color: white;
+    font-size: 14px;
+    background: rgb(14, 139, 188);
+    border: none;
+    border-radius: 30px;
+}
+.submit button:hover{
+    background: rgb(43, 110, 144);
+}
+.submit a{
+    text-decoration: none;
+    color: rgb(14, 139, 188);
+    font-weight: bold;
+}
+
+.rotate {
+    transform: skewY(-3deg);
+    background: rgb(60, 151, 197);
+    padding-inline: 2em;
+    padding-block: 2em;
+    margin-block: -1em;
+    width: min(25em, 50%);
+}
+
+.bottom{
+    background: rgb(60, 151, 197);
+    display: grid;
+    gap: .8em;
+    width: min(25em, 50%);
+    justify-items: center;
+    padding-inline: 2em;
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+.bottom h2{
+    color: white;
+}
+
+.social-media{
+    display: flex;
+    align-items: center;    
+}
+.icons-facebook{
+    height: 40px;
+    width: 40px;
+    margin-inline: 2em;
+}
+.icons-twitter{
+    height: 24px;
+
+}
+.icons-google{
+    height: 30px;
+    width: 30px;
+    margin-inline: 2em;
+}
+
+@media all and (max-width:800px) {
+    body{
+        font-size: 12px;
+    }
+    .checkbox-terms label{
+        font-size: 12px;
+    }
+    .submit button,label{
+        line-height: 1em;
+        font-size: 12px;
+    }
+    .rotate{
+        padding-block: 1em;
+    }
+    .bottom h2{
+        font-size: 12px;
+    }
+    .icons-facebook{
+        height: 35px;
+        width: 35px;
+        margin-inline: 2em;
+    }
+    .icons-twitter{
+        height: 20px;
+    
+    }
+    .icons-google{
+        height: 27px;
+        width: 27px;
+        margin-inline: 2em;
+    }
+}
